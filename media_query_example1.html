@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Media Query Example 1</title>
+        <style>
+          .container > * {
+            border: 4px solid black;
+            margin: 0.2rem;
+            padding: 1rem;
+          }
+
+          .container {
+            display: grid;
+            grid-template-columns: 1fr 5fr;
+            grid-template-areas:
+              "header  header"
+              "sidebar sidebar"
+              "main main";
+          }
+
+          @media screen and (min-width: 600px) {
+            .container {
+              grid-template-areas:
+                "header  header"
+                "sidebar main";
+            }
+          }
+
+          header {
+            grid-area: header;
+          }
+
+          aside {
+            grid-area: sidebar;
+          }
+
+          main {
+            grid-area: main;
+          }
+        </style>
+    </head>
+    <body>
+        <h1>Adjust layout at different viewport widths
+        </h1>
+        <div class="container">
+            <header>Header</header>
+            <aside>Sidebar</aside>
+            <main>Main area</main>
+        </div>      
+    </body>
+</html>
