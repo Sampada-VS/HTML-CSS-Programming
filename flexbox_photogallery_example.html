@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+		<meta charset="UTF-8">
+		<title>FlexBox Photo gallery</title>
+		<style>
+			.cards {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: flex-end;
+				flex-direction:column;
+			}
+			.cards img {
+				margin: 10px;
+				border: 3px solid #000;
+				box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+				width: 15vw;
+			}
+		</style>
+	</head>
+	<body>
+		<main class="cards">
+			<img src="img/1m.jpg" alt="Sample photo">
+			<img src="img/24m.jpg" alt="Sample photo">
+			<img src="img/9m.jpg" alt="Sample photo">
+			<img src="img/12m.jpg" alt="Sample photo">
+			<img src="img/6m.jpg" alt="Sample photo">
+		 </main>
+	</body>
+</html>

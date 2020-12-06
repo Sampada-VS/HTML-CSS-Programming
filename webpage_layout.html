@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang ="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>FlexBox Website</title>
+		<style>
+			body {
+				margin: 0;
+			}
+			.headerContainer{
+				display: flex;
+				flex-flow: column wrap;
+				align-content: center;
+				background: tomato;
+				padding: 10px;
+				font-weight: bold;
+			}
+			.footerContainer {
+				display: flex;
+				flex-flow: column wrap;
+				align-content: center;
+				background: lightgreen;
+				padding: 10px;
+				font-weight: bold;
+			}
+			.mainContainer {
+				display: flex;
+				flex-direction: row wrap;
+				font-weight: bold;
+			}
+			.mainContentItem {
+				background:deepskyblue;
+				flex: 3 0px;
+			}
+			article{
+				background: aqua;
+				padding: 10px;
+				margin: 10px;
+			}
+			.sideBarItem {
+				flex: 1 0 0;
+				border:0px solid green;
+			}
+			.sideBarLeftItem {
+				background:gold;
+				flex: 1;
+				order: 1;
+  			}
+			.mainContentItem {
+				order: 2;
+			}
+			.sideBarRightItem {
+				background:hotpink;
+				flex: 1;
+				order: 3;
+			}
+			.center{
+				text-align: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header class="headerContainer"><h1>Header- Sample Flexbox Example</h1></header>
+		<div class="mainContainer">
+			<section class="mainContentItem">
+				<article>
+					<h2>flex-direction</h2>
+					<p>This establishes the main-axis, thus defining the direction flex items areplaced in the flex container. Flexbox is (aside from optional wrapping) a
+						single-direction layout concept. Think of flex items as primarily laying outeither in horizontal rows or vertical columns.
+					</p>
+				</article>
+				<article>
+					<h2>flex-wrap</h2>
+					<p>By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with this property.
+					</p>
+				</article>
+				<article>
+					<h2>flex-flow</h2>
+					<p>This is a shorthand for the flex-direction and flex-wrap properties, which together define the flex container’s main and cross axes. The default value is row nowrap.
+					</p>
+				</article>
+			</section>
+			<sidebar class="sideBarItem sideBarLeftItem">
+				<div class="center">
+					<p>Left Side Bar</p>
+				</div>
+			</sidebar>
+			<sidebar class="sideBarItem sideBarRightItem">
+				<div class="center">
+					<p>Right Side Bar</p>
+				</div>
+			</sidebar>
+		</div>
+		<footer class="footerContainer"><h2>Footer</h2></footer>
+	</body>
+</html>
